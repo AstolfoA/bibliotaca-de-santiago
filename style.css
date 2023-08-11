@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+    color: white;
+    background: url(https://lacienciadedios.files.wordpress.com/2012/07/libros.jpg?w=593&h=396);
+}
+
+/* Ocultar boton de actualizar */
+#btnUpdate{
+    display: none; 
+}
