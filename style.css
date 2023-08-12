@@ -1,10 +1,18 @@
 body{
     background-color: black;
-    color: white;
+    color: white ;
     background-image: url(https://images.unsplash.com/photo-1542911077-46bd18a594f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJpYmxpb3RlY2FzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Ocultar boton de actualizar */
 #btnUpdate{
     display: none; 
+}
+
+.form-label{
+    font-size: 24px;
+    -webkit-text-stroke: 0.4px black;
+    color: white;
 }
