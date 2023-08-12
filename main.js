@@ -1,5 +1,5 @@
-//cree una variable para comunicarnos con el local storage, cree la lista y los botones para editar y/o eliminar al usuario.
-// no coloque la informacion en el cuadro para que no fuese tan grande el cuadro pero si aparece al seleccionar los datos del usuario.
+//funcion para validar los datos
+//cree las variables y la funcion que busca a las variables
 function validateForm(){
     let email = document.getElementById('inputEmail').value;
     let name = document.getElementById('inputName').value;
@@ -56,3 +56,42 @@ function ReadData(){
 
     document.querySelector('#tableData').innerHTML = html;
 }
+
+//para cargar lo que tenemos en la tabla.
+
+document.onload = ReadData();
+
+//validamos la informacion y creamos la funcion de crear y ver datos.
+
+function AddData(){
+    if(validateForm() == true){
+        let email = document.getElementById('inputEmail').value;
+        let name = document.getElementById('inputName').value;
+        let phone = document.getElementById('inputPhone').value;
+        let info = document.getElementById('inputInfo').value;
+        
+        var listPeople;
+
+        if(localStorage.getItem('listPeople') == null){
+            listPeople = [];
+        }else{
+            listPeople = JSON.parse(localStorage.getItem('listPeople'));
+        }
+
+        listPeople.push({
+            email: email,
+            name: name,
+            phone: phone,
+            info: info
+        });
+
+        localStorage.setItem('listPeople', JSON.stringify(listPeople));
+
+        ReadData();
+
+        document.getElementById('inputEmail').value= "";
+        document.getElementById('inputName').value= "";
+        document.getElementById('inputPhone').value= "";
+        document.getElementById('inputInfo').value= "";
+    }
+} 
