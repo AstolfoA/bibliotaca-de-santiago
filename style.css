@@ -1,7 +1,7 @@
 body{
     background-color: black;
     color: white;
-    background: url(https://lacienciadedios.files.wordpress.com/2012/07/libros.jpg?w=593&h=396);
+    background-image: url(https://images.unsplash.com/photo-1542911077-46bd18a594f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJpYmxpb3RlY2FzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
 }
 
 /* Ocultar boton de actualizar */
